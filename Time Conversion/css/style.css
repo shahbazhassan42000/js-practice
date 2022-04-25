@@ -1,0 +1,113 @@
+/*Remove Arrows/Spinners*/
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+/************************************** DESKTOP VIEW ****************************************/
+body{
+    font-family: arial, serif;
+    color: #333;
+    background: url("../images/time.jpg") no-repeat;
+    background-size: cover;
+}
+h1,#title{
+    font-weight: bolder;
+    margin: 20px auto;
+    text-align: center;
+    font-size: 2.5em;
+}
+#title{
+    font-family: 'Little Lord Fontleroy NF', sans-serif;
+    font-weight: bolder;
+    font-size: 4.5em;
+}
+form{
+    width: 500px;
+    margin: 20px auto;
+    text-align: center;
+}
+.user_input{
+    background-color: whitesmoke;
+    display: block;
+    padding: 8px 16px;
+    font-size: 2em;
+    margin: 10px auto;
+    width: 100%;
+    border-radius: 10px;
+    border: 3px solid #ccc;
+    outline: none !important;
+}
+select{
+    font-size: 2em;
+    color: #757575;
+    border-radius: 10px;
+    border: 3px solid #ccc;
+    outline: none !important;
+    padding: 0 8px;
+}
+button{
+    padding:16px 20px;
+    display: block;
+    margin: 10px auto;
+    border-radius: 10px;
+    border: 3px solid #333333;
+    background-color: #F7B9B8;
+    font-weight: bolder;
+    font-family: Poppins, sans-serif;
+}
+button:hover{
+    background-color: #B9E0DD;
+}
+button:active{
+    transform:translateY(7px);
+}
+.msg{
+    font-family: arial, serif;
+    font-size:0.9em;
+    font-weight: bold;
+    text-align: center;
+    margin: 0 auto;
+    color:orange;
+    opacity: 0;
+    height: 0;
+}
+.formatted_time{
+    display: none;
+    font-weight: bold;
+    width: 500px;
+    background-color: whitesmoke;
+    border-color: #333333;
+}
+/************************************** MOBILE VIEW *****************************************/
+@media only screen and (max-width: 600px){
+    body{
+        background: url("../images/time_mobile.jpg") no-repeat;
+        background-size: cover;
+    }
+    h1{
+        font-size: 2em;
+    }
+    form{
+        width:auto;
+        padding:0 10px;
+    }
+    .user_input,.formatted_time{
+        font-size: 1.5em;
+    }
+    .msg{
+        font-size:0.8em;
+    }
+    .formatted_time{
+        width:auto;
+        margin:0 10px;
+    }
+
+
+}
