@@ -8,3 +8,4 @@
 ## Practise Day 1
 - [Carousel](https://shahbazhassan42000.github.io/carousel/)
 - [Expense Tracker](https://shahbazhassan42000.github.io/expensetracker/)
+- [Infinite Scrolling & Filter](https://shahbazhassan42000.github.io/Infinite-scrolling/)
