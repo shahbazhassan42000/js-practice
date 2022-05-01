@@ -4,14 +4,14 @@ window.addEventListener("load", function () {
     // localStorage.setItem("todo list", "") //clear session storage
     let db = localStorage.getItem("todo list");
     let tasks = {}
-    if (db !== "") {
+    if (db !== null) {
         tasks = JSON.parse(db);
     }
 
     function fetch_tasks() {
-        for(let task in tasks){
+        for (let task in tasks) {
             add_task(task);
-            if(tasks[task]){
+            if (tasks[task]) {
                 todo_box.lastElementChild.classList.add("completed");
             }
         }
@@ -20,7 +20,11 @@ window.addEventListener("load", function () {
     fetch_tasks();
 
     function search_task(task) {
-        return tasks.hasOwnProperty(task);
+        for (let i in tasks) {
+            if(i===task)
+                return true
+        }
+        return false;
     }
 
     todo_box.addEventListener("click", function (event) {
@@ -32,9 +36,9 @@ window.addEventListener("load", function () {
     });
 
     user_input.addEventListener("keypress", function (event) {
-        if(search_task(user_input.value))
+        if (search_task(user_input.value))
             alert("Task already added");
-        else{
+        else {
             if (event.key === "Enter" && user_input.value !== "") {
                 add_task(user_input.value);
                 add_in_db(user_input.value);
@@ -59,7 +63,7 @@ window.addEventListener("load", function () {
     }
 
     function add_in_db(value) {
-        tasks[value]=false;
+        tasks[value] = false;
         localStorage.setItem("todo list", JSON.stringify(tasks));
     }
 
@@ -71,7 +75,7 @@ window.addEventListener("load", function () {
 
     function toggle_task(task) {
         task.classList.toggle("completed");
-        let key=task.innerText;
+        let key = task.innerText;
         tasks[key] = !tasks[key];
         localStorage.setItem("todo list", JSON.stringify(tasks));
     }
