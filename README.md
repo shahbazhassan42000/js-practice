@@ -9,5 +9,6 @@
 - [Carousel](https://shahbazhassan42000.github.io/carousel/)
 - [Expense Tracker](https://shahbazhassan42000.github.io/expensetracker/)
 - [Infinite Scrolling & Filter](https://shahbazhassan42000.github.io/Infinite-scrolling/)
+## Practise Day 2
 - [Tic Tac Toe](https://shahbazhassan42000.github.io/tictactoe/)
 - [Speed Typer](https://shahbazhassan42000.github.io/speedtyper/)
