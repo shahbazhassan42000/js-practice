@@ -1,0 +1,69 @@
+/************************************** DESKTOP VIEW ****************************************/
+body{
+    color: #000000;
+    background: #F5F5F5;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    font-family: Verdana, serif;
+}
+#todo_box{
+    box-shadow: 0 0 8px 5px #D5D5D5;
+    max-width: 500px;
+    margin: auto;
+}
+.entry{
+    padding: 10px 20px;
+    font-size: 1.5rem;
+    border-radius: 1px;
+    border-bottom: 1px solid #D5D5D5 !important;
+}
+#user_input{
+    font-size: 2rem;
+    border: none;
+    /*width: -moz-available;*/
+    width: -webkit-fill-available;
+    /*width: fill-available;*/
+}
+#user_input::placeholder{
+    color:#D5D5D5;
+}
+#user_input:focus-visible{
+    outline: none;
+}
+.todo{
+    position: relative;
+    background: #FFFFFF;
+}
+.icon{
+    display: none;
+    position: absolute;
+    right: 6px;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 5px 10px;
+    background: #333333;
+    width: 45px;
+    text-align: center;
+    color: #fff;
+    border-radius: 0 3px 3px 0;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+.todo:hover .icon{
+    display: inline;
+}
+.icon:active{
+    right: 4px;
+}
+.completed{
+    text-decoration: line-through;
+    color:#D5D5D5;
+}
+
+/************************************** MOBILE VIEW *****************************************/
+@media only screen and (max-width: 600px) {
+    #todo_box{
+        max-width: 95vw;
+    }
+}
